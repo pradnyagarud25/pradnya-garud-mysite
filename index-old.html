@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pradnya Garud | Full Stack Developer &amp; UI Designer</title>
+<meta name="description" content="Pradnya Garud: web design, full stack development, software testing and Figma UI design for businesses.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+:root{--bg:#f0f7ff;--s:#fff;--tx:#0f2238;--mu:#4f6580;--bd:rgba(37,99,235,.15);--a:#2563eb;--b:#06b6d4;--c:#22c55e;--d:#facc15;--g:linear-gradient(120deg,#2563eb,#06b6d4 55%,#22c55e);--g2:linear-gradient(120deg,#22c55e,#06b6d4);--sh:0 12px 40px rgba(37,99,235,.13)}
+[data-theme=dark]{--bg:#0b0a1f;--s:#15133a;--tx:#f3f1ff;--mu:#a9a6cf;--bd:rgba(255,255,255,.1);--sh:0 12px 40px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;font-size:clamp(14.5px,.4vw + 13px,16.5px);overflow-x:hidden;transition:background .3s}
+img{max-width:100%;display:block}a{color:inherit}
+.aur{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(600px 400px at 8% 5%,rgba(37,99,235,.25),transparent),radial-gradient(500px 400px at 95% 20%,rgba(6,182,212,.2),transparent),radial-gradient(600px 500px at 60% 100%,rgba(34,197,94,.18),transparent)}
+.w{max-width:1200px;margin:auto;padding:0 clamp(16px,4vw,32px)}section{padding:clamp(56px,9vw,20px) 0;scroll-margin-top:70px}
+.g{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+header{position:fixed;top:12px;left:0;right:0;z-index:100;padding:0 clamp(10px,3vw,24px)}
+.nb{max-width:1100px;margin:auto;display:flex;align-items:center;gap:8px;padding:8px 8px 8px 20px;border-radius:60px;background:color-mix(in srgb,var(--s) 80%,transparent);border:1px solid var(--bd);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:var(--sh)}
+.lg{font-weight:800;font-size:20px;letter-spacing:-.5px;text-decoration:none;margin-right:auto}
+.nb nav{display:flex;gap:2px}.nb nav a{text-decoration:none;color:var(--mu);font-size:13.5px;font-weight:600;padding:9px 14px;border-radius:30px;transition:.2s}.nb nav a:hover,.nb nav a.on{background:var(--a);color:#fff}
+.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:var(--s);color:var(--tx);font-size:17px;cursor:pointer;display:grid;place-items:center}
+.mb{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 26px;border-radius:16px;font-weight:700;font-size:14.5px;text-decoration:none;border:1px solid var(--bd);background:var(--s);color:var(--tx);cursor:pointer;transition:.25s;font-family:inherit}
+.btn.p{background:var(--g);color:#fff;border:0;box-shadow:0 12px 30px rgba(37,99,235,.35)}.btn:hover{transform:translateY(-3px)}
+.hero{min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,60px);align-items:center;padding-top:110px}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:7px 15px;border-radius:30px;background:var(--s);border:1px solid var(--bd);font-size:12.5px;font-weight:700;box-shadow:var(--sh)}.pill i{color:#22c55e;font-size:8px;animation:bl 1.6s infinite}@keyframes bl{50%{opacity:.3}}
+h1{font-size:clamp(38px,7vw,78px);line-height:1.04;font-weight:800;letter-spacing:-.04em;margin:20px 0 12px}
+.ty{font-size:clamp(17px,2.4vw,26px);font-weight:700;min-height:38px}.ty::after{content:"|";color:var(--b);animation:bl 1s infinite}
+.hero p.d{color:var(--mu);max-width:540px;margin:14px 0 28px}
+.row{display:flex;gap:12px;flex-wrap:wrap}.soc{display:flex;gap:10px;margin-top:26px}.soc a{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--s);border:1px solid var(--bd);font-size:19px;transition:.25s}.soc a:hover{background:var(--g);color:#fff;transform:translateY(-4px)}
+.ph{position:relative;display:grid;place-items:center;padding:20px}
+.ph .fr{position:relative;width:min(380px,100%);aspect-ratio:4/5;border-radius:36px;padding:5px;background:var(--g);animation:fl 6s ease-in-out infinite}
+.ph .fr div{width:100%;height:100%;border-radius:32px;background:linear-gradient(160deg,#ddd6ff,#ffd6ea);display:grid;place-items:center;font-size:90px;font-weight:800;color:#fff;overflow:hidden;position:relative}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.cp2{position:absolute;display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:16px;background:color-mix(in srgb,var(--s) 85%,transparent);backdrop-filter:blur(12px);border:1px solid var(--bd);box-shadow:var(--sh);font-size:12.5px;font-weight:700;line-height:1.3}
+.cp2 i{width:34px;height:34px;border-radius:10px;background:var(--g2);color:#fff;display:grid;place-items:center}.cp2 small{display:block;color:var(--mu);font-weight:500;font-size:11px}
+.k1{top:6%;left:-4%}.k2{bottom:20%;right:-4%}.k3{bottom:2%;left:6%}
+.mq{overflow:hidden;border-block:1px solid var(--bd);background:var(--s);padding:16px 0}.mq div{display:flex;gap:46px;width:max-content;animation:mq 32s linear infinite;font-weight:800;font-size:18px;color:var(--mu)}.mq span{display:flex;gap:10px;align-items:center;white-space:nowrap}.mq i{color:var(--a)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tt{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--b);margin-bottom:8px}
+h2{font-size:clamp(28px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}.sub{color:var(--mu);max-width:620px;margin-bottom:clamp(24px,4vw,44px)}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:26px;padding:clamp(18px,2.5vw,28px);box-shadow:var(--sh);transition:.3s}.card:hover{transform:translateY(-6px);border-color:var(--a)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.ab{grid-column:span 2;grid-row:span 2}.ab p{color:var(--mu);margin:10px 0}
+.ic{width:54px;height:54px;border-radius:17px;background:var(--g);display:grid;place-items:center;color:#fff;font-size:25px;margin-bottom:16px;box-shadow:0 10px 24px rgba(37,99,235,.3)}
+.card h3{font-size:19px;margin-bottom:6px;letter-spacing:-.01em}.card p{color:var(--mu);font-size:14.5px}
+.st b{font-size:clamp(38px,5vw,54px);font-weight:800;display:block;line-height:1.1}.st span{color:var(--mu);font-size:13.5px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tags span{padding:7px 14px;border-radius:30px;font-size:12.5px;font-weight:700;background:color-mix(in srgb,var(--a) 12%,transparent);color:var(--a)}.tags span:nth-child(2n){background:color-mix(in srgb,var(--b) 12%,transparent);color:var(--b)}.tags span:nth-child(3n){background:color-mix(in srgb,var(--c) 15%,transparent);color:#0aa0ae}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sk h3{display:flex;align-items:center;gap:10px;margin-bottom:16px}.sk h3 i{color:var(--a)}
+.sr{margin-bottom:14px}.sr div{display:flex;justify-content:space-between;font-weight:700;font-size:13.5px;margin-bottom:6px}.bar{height:9px;border-radius:9px;background:color-mix(in srgb,var(--a) 12%,transparent);overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:9px;background:var(--g);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.tabs button{border:1px solid var(--bd);background:var(--s);color:var(--mu);padding:10px 20px;border-radius:30px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;min-height:44px;transition:.2s}.tabs button.on,.tabs button:hover{background:var(--g);color:#fff;border-color:transparent}
+.hid{display:none!important}
+.pj{padding:0;overflow:hidden}.pj .im{height:clamp(140px,18vw,190px);display:grid;place-items:center;font-size:54px;color:#fffd;position:relative;overflow:hidden}.pj .im::after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:#ffffff22;right:-40px;top:-50px}
+.pj .bd{padding:20px 22px 24px}.pj .tg{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.pj .tg span{font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:20px;background:color-mix(in srgb,var(--a) 10%,transparent);color:var(--a)}
+.lk{font-weight:800;font-size:13.5px;color:var(--a);text-decoration:none;display:inline-flex;gap:6px;align-items:center}.lk:hover{gap:10px}
+.sv .n{position:absolute;top:18px;right:22px;font-size:46px;font-weight:800;opacity:.08}.sv{position:relative}.sv ul{list-style:none;margin-top:12px}.sv li{font-size:13.5px;color:var(--mu);padding:4px 0}.sv li::before{content:"✓";color:var(--a);font-weight:800;margin-right:8px}
+.stp{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}.stp .card{counter-increment:s;padding-top:60px;position:relative}.stp .card::before{content:counter(s,decimal-leading-zero);position:absolute;top:16px;left:22px;font-size:34px;font-weight:800;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tl{position:relative;padding-left:32px;max-width:820px}.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--g)}.ti{position:relative;margin-bottom:18px}.ti::before{content:"";position:absolute;left:-32px;top:26px;width:19px;height:19px;border-radius:50%;background:var(--bg);border:4px solid var(--b)}.ti small{color:var(--b);font-weight:800;font-size:12px;letter-spacing:.08em}
+.tp{display:none}.tp.on{display:block}
+details{background:var(--s);border:1px solid var(--bd);border-radius:20px;padding:4px 22px;margin-bottom:12px;transition:.2s}details[open]{border-color:var(--a);box-shadow:var(--sh)}summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px}summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:24px;color:var(--b);transition:.2s}details[open] summary::after{transform:rotate(45deg)}details p{color:var(--mu);padding-bottom:16px}
+.ct{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}form{display:grid;gap:12px}input,textarea{width:100%;padding:15px 18px;border-radius:16px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:16px;outline:0;transition:.2s}input:focus,textarea:focus{border-color:var(--a);box-shadow:0 0 0 4px color-mix(in srgb,var(--a) 20%,transparent)}
+.cl{display:flex;gap:14px;align-items:center;text-decoration:none;padding:12px 0}.cl .ic{margin:0;flex-shrink:0;width:48px;height:48px;font-size:21px}.cl small{display:block;color:var(--mu);font-size:13px}.cl b{font-size:14.5px}
+.cta{text-align:center;background:var(--g);color:#fff;border:0;position:relative;overflow:hidden}.cta p{color:#ffffffdd;max-width:520px;margin:8px auto 20px}.cta .btn{background:#fff;color:#1d4ed8}
+footer{padding:30px 0;border-top:1px solid var(--bd);text-align:center;color:var(--mu);font-size:13.5px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+.top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:88px;z-index:90;opacity:0;pointer-events:none;transition:.3s}.top.s{opacity:1;pointer-events:auto}
+.bot{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:200;width:58px;height:58px;border:0;border-radius:50%;background:var(--g);color:#fff;font-size:25px;box-shadow:0 10px 30px rgba(6,182,212,.45);cursor:pointer;transition:.25s}.bot:hover{transform:scale(1.1) rotate(-8deg)}
+.cw{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:88px;z-index:200;width:min(360px,calc(100vw - 32px));height:min(450px,calc(100dvh - 120px));display:none;flex-direction:column;background:var(--s);border:1px solid var(--bd);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(40,20,120,.3)}.cw.open{display:flex}
+.cw header{position:static;background:var(--g);color:#fff;padding:15px 18px;font-weight:800}
+.cm{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column}.m{max-width:86%;padding:10px 14px;margin-bottom:9px;border-radius:16px;font-size:13px;line-height:1.55;white-space:pre-wrap;background:color-mix(in srgb,var(--a) 10%,transparent);border-bottom-left-radius:4px}.m.u{background:var(--a);color:#fff;margin-left:auto;border-radius:16px 16px 4px 16px}
+.sg{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}.sg button{border:1px solid var(--bd);background:var(--bg);color:var(--a);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;min-height:34px}
+.cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--bd)}.cf input{padding:10px 14px;border-radius:12px}.cf button{border:0;background:var(--a);color:#fff;border-radius:12px;width:46px;cursor:pointer}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;text-align:center;padding-top:100px;min-height:auto}.hero p.d{margin-inline:auto}.row,.soc{justify-content:center}.ph{order:-1}.ph .fr{width:min(300px,80%)}.bento,.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}.stp{grid-template-columns:repeat(3,1fr)}.ct{grid-template-columns:1fr}}
+@media(max-width:760px){.nb nav{position:absolute;top:66px;left:0;right:0;flex-direction:column;padding:12px;border-radius:24px;background:var(--s);border:1px solid var(--bd);box-shadow:var(--sh);display:none}.nb nav.open{display:flex}.nb nav a{padding:14px 16px;font-size:15px}.mb{display:grid}.nb .btn{display:none}}
+@media(max-width:600px){.bento,.g4,.g3,.g2,.stp{grid-template-columns:1fr}.ab{grid-column:auto;grid-row:auto}.k1,.k2{display:none}.btn{width:100%}.row .btn{flex:1 1 100%}.bento .st{display:inline-block}.bento{grid-template-columns:1fr 1fr}.ab{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.ex{list-style:none;margin-top:14px}.ex li{position:relative;padding:6px 0 6px 28px;font-size:14px;color:var(--mu)}
+.ex li::before{content:"\2713";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
+.co{font-weight:700;color:var(--tx)!important;margin-top:2px}.co i{color:var(--a);margin-right:4px}
+</style>
+</head>
+<body>
+<div class="aur"></div>
+<header><div class="nb"><a class="lg" href="#home">Pradnya<span class="g">.</span></a>
+ <nav id="nv"><a class="on" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav>
+ <button class="ib" id="th" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill"></i></button><a class="btn p" style="min-height:42px;padding:8px 20px" href="#contact">Hire Me</a><button class="ib mb" id="mn" aria-label="Menu"><i class="bi bi-list"></i></button></div></header>
+
+<section class="hero w" id="home">
+ <div><span class="pill"><i class="bi bi-circle-fill"></i>Available for Projects</span>
+  <h1>Hi, I'm <span class="g">Pradnya Garud</span></h1><div class="ty" id="ty"></div>
+  <p class="d">I create beautiful websites, develop reliable web applications and test digital products to deliver smooth, user-friendly experiences for businesses.</p>
+  <div class="row"><a class="btn p" href="mailto:pradnyagarud25@gmail.com"><i class="bi bi-send-fill"></i>Hire Me</a><a class="btn" href="#projects"><i class="bi bi-grid"></i>View Projects</a><a class="btn" href="Pradnya_Garud_Resume.pdf" download><i class="bi bi-download"></i>Resume</a></div>
+  <div class="soc"><a href="https://github.com/pradnyagarud25/" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a><a href="https://www.linkedin.com/in/pradnya-garud-b31532254/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="mailto:pradnyagarud25@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a><a href="https://www.instagram.com/pgarud_2001?gwpx=MTdpanJxajR6MGRlaQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div></div>
+ <div class="ph"><div class="fr"><div>PG<img src="profile.jpeg" alt="Pradnya Garud" onerror="this.remove()"></div></div>
+  <div class="cp2 k1"><i class="bi bi-code-slash"></i><div>Full Stack<small>PHP · ASP.NET · SQL</small></div></div>
+  <div class="cp2 k2"><i class="bi bi-palette"></i><div>Figma UI<small>Prototypes</small></div></div>
+  <div class="cp2 k3"><i class="bi bi-bug"></i><div>QA Testing<small>Bug-free delivery</small></div></div></div>
+</section>
+
+<div class="mq" aria-hidden="true"><div>
+ <span><i class="bi bi-bootstrap"></i>Bootstrap 5</span><span><i class="bi bi-filetype-js"></i>JavaScript</span><span><i class="bi bi-filetype-php"></i>PHP</span><span><i class="bi bi-microsoft"></i>ASP.NET</span><span><i class="bi bi-database"></i>SQL Server</span><span><i class="bi bi-palette"></i>Figma</span><span><i class="bi bi-bug"></i>Testing</span><span><i class="bi bi-github"></i>GitHub</span>
+ <span><i class="bi bi-bootstrap"></i>Bootstrap 5</span><span><i class="bi bi-filetype-js"></i>JavaScript</span><span><i class="bi bi-filetype-php"></i>PHP</span><span><i class="bi bi-microsoft"></i>ASP.NET</span><span><i class="bi bi-database"></i>SQL Server</span><span><i class="bi bi-palette"></i>Figma</span><span><i class="bi bi-bug"></i>Testing</span><span><i class="bi bi-github"></i>GitHub</span></div></div>
+
+<section id="about"><div class="w"><span class="tt rv">About me</span><h2 class="rv">Design. Develop. <span class="g">Deliver.</span></h2><p class="sub rv">One person for the whole journey: from the first sketch in Figma to a tested, working website.</p>
+ <div class="bento">
+  <div class="card ab rv"><div class="ic"><i class="bi bi-person-heart"></i></div><h3>Full Stack Developer &amp; UI Designer</h3><p>I work across web design, backend development and software testing, so every product I build looks good, works reliably and is checked carefully before it reaches your users.</p><p>I build responsive layouts with Bootstrap 5, create dynamic apps with PHP and ASP.NET, manage data with SQL Server, and design clean interfaces in Figma.</p><div class="tags"><span>Bootstrap 5</span><span>ASP.NET / PHP</span><span>JavaScript</span><span>SQL Server</span><span>Figma UI</span><span>Software Testing</span></div></div>
+  <div class="card st rv"><b class="g" data-n="5" data-s="+">0</b><span>Projects</span></div>
+  <div class="card st rv"><b class="g" data-n="8">0</b><span>Technologies</span></div>
+  <div class="card st rv"><b class="g" data-n="3">0</b><span>Certificates</span></div>
+  <div class="card st rv"><b class="g" data-n="100" data-s="%">0</b><span>Commitment</span></div>
+ </div></div></section>
+
+<section id="skills"><div class="w"><span class="tt rv">Skills</span><h2 class="rv">My <span class="g">Tech Stack</span></h2><p class="sub rv">Tools and technologies I use every day to design, build and test.</p>
+ <div class="g2" id="sk">
+  <div class="card sk rv"><h3><i class="bi bi-window-desktop"></i>Frontend</h3><div class="sr"><div><span>HTML / CSS / Bootstrap 5</span><span>90%</span></div><div class="bar"><i data-w="90"></i></div></div><div class="sr"><div><span>JavaScript</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div></div>
+  <div class="card sk rv"><h3><i class="bi bi-hdd-network"></i>Backend &amp; Database</h3><div class="sr"><div><span>PHP / ASP.NET MVC</span><span>78%</span></div><div class="bar"><i data-w="78"></i></div></div><div class="sr"><div><span>SQL Server</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div></div>
+  <div class="card sk rv"><h3><i class="bi bi-palette"></i>Design</h3><div class="sr"><div><span>Figma UI / Prototyping</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div><div class="sr"><div><span>Responsive Layouts</span><span>90%</span></div><div class="bar"><i data-w="90"></i></div></div></div>
+  <div class="card sk rv"><h3><i class="bi bi-bug"></i>Testing &amp; Tools</h3><div class="sr"><div><span>Manual Testing / QA</span><span>88%</span></div><div class="bar"><i data-w="88"></i></div></div><div class="sr"><div><span>Git &amp; GitHub</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div></div>
+ </div></div></section>
+
+<!-- =====================================================================
+  PART 1: Replace your whole  <section id="projects"> ... </section>  with this section.
+  ===================================================================== -->
+<section id="projects"><div class="w"><span class="tt rv">Portfolio</span><h2 class="rv">Featured <span class="g">Projects</span></h2><p class="sub rv">Company projects are described generically. Details will be added where sharing is allowed.</p>
+ <div class="tabs" id="pt"><button class="on" data-f="all">All</button><button data-f="web">Web Apps</button><button data-f="ai">AI</button><button data-f="ui">UI Design</button></div>
+ <div class="g3" id="pg">
+
+  <!-- 1. EMS -->
+  <article class="card pj rv" data-c="web" data-imgs="images/ems-1.jpg,images/ems-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#6d4aff,#ff4f9a)"><i class="bi bi-people"></i></div>
+   <div class="bd"><h3>Employee Management System (EMS)</h3>
+    <p>Web application for managing employee records, attendance, leave and salary information.</p>
+    <div class="tg"><span>PHP</span><span>jQuery</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>AJAX</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden>
+     <p class="role"><b>My role:</b> Developed the application, database functionality and AJAX-based features.</p>
+     <ul class="ex"><li>Employee management</li><li>Attendance management</li><li>Leave management</li><li>Salary records</li><li>Admin login</li><li>Employee login</li><li>Role-based access</li><li>AJAX functionality</li></ul>
+    </div></div></article>
+
+  <!-- 2. CRM -->
+  <article class="card pj rv" data-c="web" data-imgs="images/crm-1.jpg,images/crm-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#14c8d8,#6d4aff)"><i class="bi bi-headset"></i></div>
+   <div class="bd"><h3>CRM / Telecalling System</h3>
+    <p>CRM application for managing leads, customer interactions, follow-ups and telecalling activities.</p>
+    <div class="tg"><span>PHP</span><span>jQuery</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>AJAX</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden>
+     <p class="role"><b>My role:</b> Developed CRM modules, business logic, SQL reports and responsive interfaces.</p>
+     <ul class="ex"><li>Lead management</li><li>Customer management</li><li>Follow-ups</li><li>Appointment reminders</li><li>Call history</li><li>Customer interaction tracking</li><li>Lead reports</li><li>Telecalling reports</li></ul>
+    </div></div></article>
+
+  <!-- 3. Business Partner Document Management -->
+  <article class="card pj rv" data-c="web" data-imgs="images/bpdms-1.jpg,images/bpdms-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#22c55e,#14c8d8)"><i class="bi bi-file-earmark-check"></i></div>
+   <div class="bd"><h3>Business Partner Document Management System</h3>
+    <p>Portal for vendors and business partners to submit documents for verification and approval.</p>
+    <div class="tg"><span>Angular</span><span>PHP</span><span>CodeIgniter</span><span>SQL Server</span><span>SharePoint</span><span>REST API</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden>
+     <p class="role"><b>My role:</b> Developed application modules, integrated APIs and SharePoint, implemented document workflows and handled production support.</p>
+     <ul class="ex"><li>Document upload</li><li>Document verification</li><li>Approval workflow</li><li>Status tracking</li><li>User access management</li><li>SharePoint integration</li><li>API integration</li><li>Document history</li></ul>
+    </div></div></article>
+
+  <!-- 4. ZIEP -->
+  <article class="card pj rv" data-c="web" data-imgs="images/ziep-1.jpg,images/ziep-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#ffb020,#ff4f9a)"><i class="bi bi-lightbulb"></i></div>
+   <div class="bd"><h3>ZIEP – Zinc Innovation Excellence Portal</h3>
+    <p>Enterprise innovation portal for managing Idea Innovation, Kaizen, SGA, FIP, R&amp;R Evaluation and related master and approval workflows.</p>
+    <div class="tg"><span>ASP.NET MVC</span><span>C#</span><span>SQL Server</span><span>JavaScript</span><span>jQuery</span><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden>
+     <p class="role"><b>My role:</b> Developed and maintained enterprise modules, UI features, validations, workflows, SQL stored procedures, testing and production support.</p>
+     <ul class="ex"><li>Idea Innovation workflow</li><li>Kaizen management</li><li>SGA registration and approval workflow</li><li>FIP registration and approval workflow</li><li>R&amp;R Evaluation and ranking</li><li>Master management</li><li>Role-based workflows</li><li>SQL Server stored procedures</li><li>Functional and UAT testing</li><li>Bug fixing and production support</li></ul>
+    </div></div></article>
+
+  <!-- 5. HR AI Assistance -->
+  <article class="card pj rv" data-c="ai" data-imgs="images/hr-ai-1.jpg,images/hr-ai-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#17143a,#6d4aff)"><i class="bi bi-robot"></i></div>
+   <div class="bd"><h3>HR AI Assistance</h3>
+    <p>AI-powered HR assistance application with React frontend, API integration and AI/RAG based backend processing.</p>
+    <div class="tg"><span>React</span><span>Vite</span><span>FastAPI</span><span>Python</span><span>MySQL</span><span>REST API</span><span>RAG</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden>
+     <p class="role"><b>My role:</b> Worked on frontend development, API integration, UI improvements, backend integration and application setup/deployment.</p>
+     <ul class="ex"><li>AI-assisted HR queries</li><li>React-based user interface</li><li>REST API integration</li><li>FastAPI backend</li><li>RAG-based response flow</li><li>MySQL database integration</li><li>Responsive UI</li><li>Deployment support</li></ul>
+    </div></div></article>
+
+  <!-- 6. NED Gate Pass UI/UX -->
+  <article class="card pj rv" data-c="ui" data-imgs="images/gatepass-1.jpg,images/gatepass-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#ef4444,#ffb020)"><i class="bi bi-door-open"></i></div>
+   <div class="bd"><h3>NED Gate Pass – UI/UX Design</h3>
+    <p>Designed the complete application interface and approval workflow prototype in Figma based on business requirements.</p>
+    <div class="tg"><span>Figma</span><span>UI/UX</span><span>Wireframing</span><span>Prototyping</span><span>Responsive Design</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden></div></div></article>
+
+  <!-- 7. UI/UX & Figma Designs -->
+  <article class="card pj rv" data-c="ui" data-imgs="images/figma-1.jpg,images/figma-2.jpg">
+   <div class="im" style="background:linear-gradient(135deg,#06b6d4,#2563eb)"><i class="bi bi-vector-pen"></i></div>
+   <div class="bd"><h3>UI/UX &amp; Figma Designs</h3>
+    <p>UI/UX design work covering responsive dashboards, enterprise portals, forms, tables, workflows and interactive prototypes.</p>
+    <div class="tg"><span>Figma</span><span>UI/UX</span><span>Wireframing</span><span>Prototyping</span><span>Responsive Design</span><span>Dashboard Design</span></div>
+    <button class="lk pbtn" type="button">View details <i class="bi bi-arrow-right"></i></button>
+    <div class="pd" hidden>
+     <p class="role"><b>My role:</b> Created wireframes, UI designs and interactive prototypes based on application requirements and converted designs into responsive web interfaces.</p>
+     <ul class="ex"><li>Dashboard design</li><li>Enterprise portal design</li><li>Responsive layouts</li><li>Form design</li><li>Table and listing design</li><li>Workflow design</li><li>Interactive prototypes</li><li>User-friendly UI</li><li>Mobile responsive design</li></ul>
+    </div></div></article>
+
+ </div></div></section>
+
+
+<!-- =====================================================================
+  PART 2: Paste everything below just before  </body>
+  ===================================================================== -->
+<style>
+.pbtn{background:none;border:0;cursor:pointer;font-family:inherit;padding:0}
+.pj .im.has{background-size:cover!important;background-position:center}
+.pj .im.has i{display:none}
+.pj .im{transition:transform .5s}.pj:hover .im{transform:scale(1.04)}
+.pj{overflow:hidden}
+/* make sure the tick list style exists */
+.ex{list-style:none;margin-top:14px}.ex li{position:relative;padding:6px 0 6px 28px;font-size:14px;color:var(--mu)}
+.ex li::before{content:"\2713";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
+/* popup */
+#pm{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(6,10,30,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+#pm.open{display:flex}
+.pmc{position:relative;width:min(780px,100%);max-height:calc(100dvh - 32px);overflow:auto;background:var(--s);color:var(--tx);border:1px solid var(--bd);border-radius:26px;padding:clamp(20px,4vw,34px);box-shadow:0 30px 80px rgba(0,0,0,.4);animation:pmin .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pmin{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.pmx{position:absolute;top:14px;right:14px}
+.pmc h3{font-size:clamp(20px,3vw,26px);margin:0 46px 8px 0;letter-spacing:-.02em;line-height:1.2}
+.pmc .dsc,.pmc .role{color:var(--mu)}.pmc .role b{color:var(--tx)}
+.pmc h4{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--b);margin:22px 0 4px}
+.pmc .tg{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}
+.pmc .tg span{font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:20px;background:color-mix(in srgb,var(--a) 10%,transparent);color:var(--a)}
+.pmg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
+.pmg:empty{display:none}
+.pmg img{width:100%;border-radius:14px;border:1px solid var(--bd)}
+@media(max-width:600px){.pmg{grid-template-columns:1fr}}
+</style>
+
+<div id="pm" role="dialog" aria-modal="true" aria-labelledby="pmt">
+  <div class="pmc"><button class="ib pmx" id="pmx" type="button" aria-label="Close"><i class="bi bi-x-lg"></i></button><div id="pmb"></div></div>
+</div>
+
+<script>
+(function () {
+  var pm = document.getElementById('pm'), pmb = document.getElementById('pmb'), pmx = document.getElementById('pmx'), last = null;
+
+  // use the first image as the card cover, if the file exists
+  document.querySelectorAll('#pg .pj[data-imgs]').forEach(function (c) {
+    var first = c.dataset.imgs.split(',')[0].trim(), im = new Image();
+    im.onload = function () { var box = c.querySelector('.im'); box.style.backgroundImage = 'url("' + first + '")'; box.classList.add('has'); };
+    im.src = first;
+  });
+
+  function openProject(card) {
+    last = document.activeElement;
+    var extra = card.querySelector('.pd'), role = extra.querySelector('.role'), list = extra.querySelector('.ex');
+    pmb.innerHTML =
+      '<h3 id="pmt">' + card.querySelector('h3').innerHTML + '</h3>' +
+      '<p class="dsc">' + card.querySelector('.bd > p').innerHTML + '</p>' +
+      '<div class="tg">' + card.querySelector('.tg').innerHTML + '</div>' +
+      (role ? '<h4>My role</h4><p class="role">' + role.innerHTML.replace(/^<b>My role:<\/b>\s*/, '') + '</p>' : '') +
+      (list ? '<h4>Key features</h4><ul class="ex">' + list.innerHTML + '</ul>' : '') +
+      '<div class="pmg" id="pmg"></div>';
+    // screenshots: only the ones that really exist are shown
+    var g = document.getElementById('pmg');
+    (card.dataset.imgs || '').split(',').forEach(function (src) {
+      src = src.trim(); if (!src) return;
+      var im = new Image(); im.alt = card.querySelector('h3').textContent + ' screenshot'; im.loading = 'lazy';
+      im.onload = function () { g.appendChild(im); }; im.src = src;
+    });
+    pm.classList.add('open'); document.documentElement.style.overflow = 'hidden'; pmx.focus();
+  }
+  function closeProject() {
+    pm.classList.remove('open'); document.documentElement.style.overflow = '';
+    if (last) last.focus();
+  }
+
+  document.querySelectorAll('#pg .pbtn').forEach(function (b) {
+    b.addEventListener('click', function () { openProject(b.closest('.pj')); });
+  });
+  pmx.addEventListener('click', closeProject);
+  pm.addEventListener('click', function (e) { if (e.target === pm) closeProject(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && pm.classList.contains('open')) closeProject(); });
+})();
+</script>
+
+
+<section id="services"><div class="w"><span class="tt rv">Services</span><h2 class="rv">What I can <span class="g">do for you</span></h2><p class="sub rv">Everything your product needs, from idea to launch.</p>
+ <div class="g4">
+  <div class="card sv rv"><span class="n">01</span><div class="ic"><i class="bi bi-laptop"></i></div><h3>Website Design</h3><p>Modern, mobile-first websites.</p><ul><li>Landing pages</li><li>Business websites</li><li>Responsive layouts</li></ul></div>
+  <div class="card sv rv"><span class="n">02</span><div class="ic"><i class="bi bi-code-slash"></i></div><h3>Full Stack Development</h3><p>Frontend, backend and database.</p><ul><li>Login systems</li><li>Dashboards &amp; reports</li><li>API integration</li></ul></div>
+  <div class="card sv rv"><span class="n">03</span><div class="ic"><i class="bi bi-check2-circle"></i></div><h3>Testing &amp; QA</h3><p>Reliable, bug-free products.</p><ul><li>Test cases</li><li>Bug reporting</li><li>Form &amp; UI validation</li></ul></div>
+  <div class="card sv rv"><span class="n">04</span><div class="ic"><i class="bi bi-palette"></i></div><h3>Figma UI Design</h3><p>Designs you approve first.</p><ul><li>Wireframes</li><li>High-fidelity UI</li><li>Clickable prototypes</li></ul></div>
+ </div></div></section>
+
+<section><div class="w"><span class="tt rv">Process</span><h2 class="rv">How I <span class="g">work</span></h2><p class="sub rv">A simple, transparent process from first call to final delivery.</p>
+ <div class="stp"><div class="card rv"><h3>Discover</h3><p>Goals, users, features and timeline.</p></div><div class="card rv"><h3>Design</h3><p>Wireframes and Figma prototypes.</p></div><div class="card rv"><h3>Develop</h3><p>Clean, responsive code with updates.</p></div><div class="card rv"><h3>Test</h3><p>Every screen and form checked.</p></div><div class="card rv"><h3>Deliver</h3><p>Launch, handover and support.</p></div></div></div></section>
+
+<section id="journey"><div class="w"><span class="tt rv">Journey</span><h2 class="rv">Experience &amp; <span class="g">Education</span></h2><p class="sub rv">Edit the placeholders below with your real details.</p>
+ <div class="tabs" id="jt"><button class="on" data-k="e">Experience</button><button data-k="d">Education</button><button data-k="c">Certificates</button></div>
+ <div class="tl"><div class="tp on" data-k="e"><div class="ti card"><small>April 2026 – Present</small><h3>PHP Full Stack Developer</h3><p class="co"><i class="bi bi-building"></i> Microlink Infrastructure Management Pvt Ltd, Mumbai (Remote)</p><ul class="ex"><li>Develop and maintain enterprise web applications using PHP, Laravel, CodeIgniter, Angular, ASP.NET MVC and MS SQL Server.</li><li>Build responsive interfaces using Angular, JavaScript, jQuery, HTML, CSS and Bootstrap with dynamic features using AJAX.</li><li>Create UI/UX designs, wireframes and interactive prototypes using Figma and translate designs into responsive web interfaces.</li><li>Integrate SharePoint lists and APIs to fetch, manage and synchronize application data.</li><li>Develop and optimize SQL queries, stored procedures and database operations.</li><li>Work on enterprise workflows, validations, dashboards, reports and master management modules.</li><li>Perform functional testing, UAT testing, regression testing and verification of fixes.</li><li>Take part in requirement analysis, UAT deployment, production deployment, bug fixing and production support.</li></ul></div><div class="ti card"><small>Jan 2024 – March 2026</small>
+  <h3>PHP / Web Developer</h3>
+  <p class="co"><i class="bi bi-building"></i> Cloud Console Design | Development | Promotion &middot; Pune</p>
+  <ul class="ex">
+    <li>Designed and developed responsive websites and web-based business applications using PHP, MySQL, SQL Server, HTML, CSS, Bootstrap and jQuery.</li>
+    <li>Developed frontend and backend modules based on business requirements.</li>
+    <li>Worked on database design, SQL queries and application data management.</li>
+    <li>Created responsive UI layouts and improved cross-browser and cross-device compatibility.</li>
+    <li>Handled the complete project lifecycle including requirement analysis, development, testing and deployment.</li>
+    <li>Worked with clients and cross-functional teams to understand requirements and deliver application features.</li>
+    <li>Fixed application bugs, UI issues and production-related problems.</li>
+  </ul>
+</div></div>
+ <div class="tp" data-k="d">
+  <div class="ti card"><small>2024</small>
+    <h3>M.Sc. Computer Science</h3>
+    <p class="co"><i class="bi bi-mortarboard"></i> Savitribai Phule Pune University</p>
+    <p>Score: 71.95%</p>
+  </div>
+  <div class="ti card"><small>2022</small>
+    <h3>B.Sc. Computer Science</h3>
+    <p class="co"><i class="bi bi-mortarboard"></i> Savitribai Phule Pune University</p>
+    <p>Score: 80.59%</p>
+  </div>
+  <div class="ti card"><small>2019</small>
+    <h3>HSC</h3>
+    <p class="co"><i class="bi bi-mortarboard"></i> Maharashtra Board</p>
+    <p>Score: 52.77%</p>
+  </div>
+  <div class="ti card"><small>2017</small>
+    <h3>SSC</h3>
+    <p class="co"><i class="bi bi-mortarboard"></i> Maharashtra Board</p>
+    <p>Score: 74.80%</p>
+  </div>
+  <div class="ti card"><small>ALWAYS LEARNING</small>
+    <h3>Learning and Development</h3>
+    <p>I continue to expand my skills across PHP, Angular, React and .NET MVC while improving my UI/UX design and prototyping skills with Figma.</p>
+  </div>
+</div>
+ <div class="tp" data-k="c">
+  <div class="ti card"><small>Apr 2023 – Sep 2023 · 6 months</small>
+    <h3>.NET Full Stack Development Training</h3>
+    <p class="co"><i class="bi bi-patch-check"></i> CIIT Training Institute Pvt Ltd &middot; Pune, Maharashtra</p>
+    <ul class="ex">
+      <li>Duration: 6 months | Completed: September 2023.</li>
+      <li>Completed a six-month training program in .NET Full Stack Development.</li>
+      <li>Completed a live project using .NET technology under the guidance of a Project Manager.</li>
+    </ul>
+    <div class="tags"><span>C# in .NET</span><span>ASP.NET MVC5</span></div>
+    <p style="margin-top:16px"><a class="lk" href="certificate.jpg" target="_blank" rel="noopener"><i class="bi bi-award"></i> View Certificate <i class="bi bi-arrow-right"></i></a></p>
+  </div>
+</div></div></div></section>
+
+<section id="faq"><div class="w" style="max-width:860px"><span class="tt rv">FAQ</span><h2 class="rv">Common <span class="g">questions</span></h2><br>
+ <details class="rv" open><summary>What kind of projects do you take?</summary><p>Business websites, web applications, admin dashboards, Figma UI designs and software testing work.</p></details>
+ <details class="rv"><summary>Will my website work on mobile?</summary><p>Yes. Everything is mobile-first and tested on phones, tablets and desktops.</p></details>
+ <details class="rv"><summary>How long does a project take?</summary><p>A simple website takes about 1–2 weeks. Larger apps depend on features, and you get a clear timeline upfront.</p></details>
+ <details class="rv"><summary>Do you design before developing?</summary><p>Yes. I make Figma designs and prototypes first so you can approve the look before coding.</p></details>
+ <details class="rv"><summary>How much does it cost?</summary><p>It depends on pages, features and timeline. Send your requirements and I will share a quote.</p></details>
+ <details class="rv"><summary>Do you offer support after launch?</summary><p>Yes. Bug fixes, small updates and guidance are available after delivery.</p></details></div></section>
+
+<section id="contact"><div class="w"><div class="card cta rv" style="margin-bottom:20px"><h2>Let's build something great</h2><p>Have a project in mind? Tell me about it and I'll reply within 24 hours.</p><a class="btn" href="mailto:pradnyagarud25@gmail.com"><i class="bi bi-send-fill"></i>pradnyagarud25@gmail.com</a></div>
+ <div class="ct"><div class="card rv"><h3 style="margin-bottom:14px">Send a message</h3><form id="cfm"><input id="fn" placeholder="Your name" required autocomplete="name"><input id="fe" type="email" placeholder="Your email" required autocomplete="email"><textarea id="fm" rows="5" placeholder="Tell me about your project..." required></textarea><button class="btn p"><i class="bi bi-send-fill"></i>Send Message</button></form></div>
+  <div class="card rv"><h3 style="margin-bottom:8px">Find me online</h3>
+   <a class="cl" href="mailto:pradnyagarud25@gmail.com"><div class="ic"><i class="bi bi-envelope-fill"></i></div><div><b>Email</b><small>pradnyagarud25@gmail.com</small></div></a>
+   <a class="cl" href="https://github.com/pradnyagarud25/" target="_blank" rel="noopener"><div class="ic"><i class="bi bi-github"></i></div><div><b>GitHub</b><small>pradnyagarud25</small></div></a>
+   <a class="cl" href="https://www.linkedin.com/in/pradnya-garud-b31532254/" target="_blank" rel="noopener"><div class="ic"><i class="bi bi-linkedin"></i></div><div><b>LinkedIn</b><small>Pradnya Garud</small></div></a>
+   <a class="cl" href="https://www.instagram.com/pgarud_2001?gwpx=MTdpanJxajR6MGRlaQ==" target="_blank" rel="noopener"><div class="ic"><i class="bi bi-instagram"></i></div><div><b>Instagram</b><small>pgarud_2001</small></div></a>
+   <a class="btn" style="margin-top:10px;width:100%" href="Pradnya_Garud_Resume.pdf" download><i class="bi bi-download"></i>Download Resume</a></div></div></div></section>
+
+<footer><div class="w">© 2026 Pradnya Garud · Designed with passion · Available for web projects</div></footer>
+
+<a class="ib top" id="tp" href="#home" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+<button class="bot" id="bot" aria-label="Open assistant"><i class="bi bi-chat-dots-fill"></i></button>
+<div class="cw" id="cw" role="dialog" aria-label="Portfolio assistant"><header>Pradnya's Assistant</header>
+ <div class="cm" id="cm"><div class="m">Hi! 👋 Welcome to Pradnya's portfolio. Ask about services, skills, projects or contact.</div></div>
+ <div class="sg"><button data-q="services">Services</button><button data-q="skills">Skills</button><button data-q="projects">Projects</button><button data-q="contact">Contact</button></div>
+ <form class="cf" id="cf"><input id="ci" placeholder="Ask me something..." autocomplete="off" maxlength="300" required><button aria-label="Send"><i class="bi bi-send-fill"></i></button></form></div>
+
+<script>
+var $=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)};
+$("#th").onclick=function(){var h=document.documentElement,l=h.dataset.theme==="light";h.dataset.theme=l?"dark":"light";this.innerHTML=l?'<i class="bi bi-sun-fill"></i>':'<i class="bi bi-moon-stars-fill"></i>'};
+$("#mn").onclick=function(){$("#nv").classList.toggle("open")};$$("#nv a").forEach(function(a){a.onclick=function(){$("#nv").classList.remove("open")}});
+var W=["Full Stack Developer","UI/UX Designer","Software Tester","Web Designer"],wi=0,k=0,del=false,ty=$("#ty");
+(function t(){var w=W[wi];ty.textContent=w.slice(0,k);if(!del&&k++===w.length){del=true;return setTimeout(t,1400)}if(del&&--k<0){del=false;k=0;wi=(wi+1)%W.length}setTimeout(t,del?40:80)})();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;t.classList.add("in");t.querySelectorAll("[data-w]").forEach(function(b){b.style.width=b.dataset.w+"%"});
+ var n=t.querySelector("[data-n]");if(n){var v=+n.dataset.n,c=0,st=Math.max(1,Math.round(v/30)),iv=setInterval(function(){c=Math.min(v,c+st);n.textContent=c+(c===v&&n.dataset.s?n.dataset.s:"");if(c>=v)clearInterval(iv)},40)}io.unobserve(t)})},{threshold:.15});
+$$(".rv").forEach(function(e){io.observe(e)});
+var secs=$$("section[id]"),nl=$$("#nv a");
+addEventListener("scroll",function(){var y=scrollY+130,c="home";secs.forEach(function(s){if(s.offsetTop<=y)c=s.id});nl.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+c)});$("#tp").classList.toggle("s",scrollY>600)},{passive:true});
+$$("#pt button").forEach(function(b){b.onclick=function(){$$("#pt button").forEach(function(x){x.classList.toggle("on",x===b)});$$("#pg .pj").forEach(function(p){p.classList.toggle("hid",b.dataset.f!=="all"&&p.dataset.c!==b.dataset.f)})}});
+$$("#jt button").forEach(function(b){b.onclick=function(){$$("#jt button").forEach(function(x){x.classList.toggle("on",x===b)});$$(".tp").forEach(function(p){p.classList.toggle("on",p.dataset.k===b.dataset.k)})}});
+$("#cfm").onsubmit=function(e){e.preventDefault();location.href="mailto:pradnyagarud25@gmail.com?subject="+encodeURIComponent("Portfolio enquiry from "+$("#fn").value)+"&body="+encodeURIComponent($("#fm").value+"\n\nFrom: "+$("#fn").value+" ("+$("#fe").value+")")};
+var cw=$("#cw"),cm=$("#cm"),ci=$("#ci");
+$("#bot").onclick=function(){cw.classList.toggle("open");ci.focus()};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")cw.classList.remove("open")});
+function add(x,c){var m=document.createElement("div");m.className="m "+c;m.textContent=x;cm.appendChild(m);cm.scrollTop=cm.scrollHeight}
+function reply(q){q=q.toLowerCase();
+ if(/\b(hi|hello|hey|namaste)\b/.test(q))return"Hi! 👋 Thanks for visiting my portfolio.";
+ if(/service|design|figma/.test(q))return"Services:\n• Website Design\n• Full Stack Development\n• Testing & QA\n• Figma UI Design";
+ if(/skill|tech|bootstrap|php|asp|sql|javascript/.test(q))return"Skills: HTML, CSS, Bootstrap 5, JavaScript, PHP, ASP.NET MVC, SQL Server, Git, Figma and software testing.";
+ if(/project|work|portfolio/.test(q))return"See the Projects section for web apps, UI designs and QA work. GitHub: github.com/pradnyagarud25";
+ if(/test|qa|bug/.test(q))return"I write test cases, report bugs, validate forms and run UI checks.";
+ if(/contact|email|hire|phone/.test(q))return"Email: pradnyagarud25@gmail.com, or use the contact form below.";
+ if(/price|cost|budget|time|long/.test(q))return"Cost and time depend on features and design. Send your requirements for a quote.";
+ return"I can help with Services, Skills, Projects and Contact details.";}
+function send(x){x=x.trim();if(!x)return;add(x,"u");add(reply(x),"");ci.value=""}
+$("#cf").onsubmit=function(e){e.preventDefault();send(ci.value)};
+$$("[data-q]").forEach(function(b){b.onclick=function(){send(b.dataset.q)}});
+</script>
+<!-- ===== BUBBLES + BLACK INTRO =====
+     Paste this whole block just before </body>, after your existing <script>. -->
+<style>
+/* floating bubbles (background) + intro bubbles */
+#bgb{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bb{position:absolute;bottom:-140px;border-radius:50%;
+  background:radial-gradient(circle at 30% 26%,rgba(255,255,255,.85),rgba(255,255,255,.15) 26%,transparent 58%),radial-gradient(circle,var(--c1),transparent 72%);
+  border:1px solid rgba(37,99,235,.28);
+  animation:bbrise var(--d) linear var(--dl) infinite;will-change:transform}
+@keyframes bbrise{
+  0%{transform:translate3d(0,0,0) scale(.8);opacity:0}
+  10%{opacity:.9}
+  50%{transform:translate3d(var(--x),-60vh,0) scale(1)}
+  100%{transform:translate3d(calc(var(--x) * -1),-125vh,0) scale(1.1);opacity:0}}
+
+/* black intro screen */
+#intro{position:fixed;inset:0;z-index:9999;background:#04050d;display:grid;place-items:center;text-align:center;overflow:hidden;--r:0%;
+  -webkit-mask:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 10%));
+  mask:radial-gradient(circle at 50% 50%,transparent var(--r),#000 calc(var(--r) + 10%))}
+#intro .bb{border-color:rgba(255,255,255,.25);box-shadow:0 0 30px var(--c1)}
+#intro .it{position:relative;z-index:2;padding:0 20px}
+#intro h1{margin:0 0 8px;font-size:clamp(40px,9vw,84px);line-height:1.05;letter-spacing:-.04em;
+  background:linear-gradient(120deg,#2563eb,#06b6d4 55%,#22c55e);-webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;animation:iin 1s .3s ease forwards}
+#intro p{color:#a9b8d6;font-weight:600;letter-spacing:.08em;font-size:clamp(12px,2vw,15px);opacity:0;animation:iin 1s .7s ease forwards}
+.lbar{width:min(220px,60vw);height:4px;border-radius:4px;background:#ffffff1f;margin:24px auto 0;overflow:hidden}
+.lbar i{display:block;height:100%;width:0;border-radius:4px;background:linear-gradient(120deg,#2563eb,#06b6d4,#22c55e);animation:ld 2.2s .3s ease forwards}
+@keyframes iin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes ld{to{width:100%}}
+
+/* hero slides in as the colour reveal opens */
+@keyframes hup{from{opacity:0;transform:translateY(36px)}}
+.rdy .hero>div:first-child{animation:hup .9s .15s both}
+.rdy .hero .ph{animation:hup .9s .35s both}
+
+/* click pop bubbles */
+.pop{position:fixed;z-index:9998;pointer-events:none;border-radius:50%;border:1.5px solid rgba(37,99,235,.6);background:rgba(6,182,212,.18);animation:pp 1s ease-out forwards}
+@keyframes pp{to{transform:translate(var(--dx),-90px) scale(1.5);opacity:0}}
+
+/* extra look & feel */
+#sp{position:fixed;top:0;left:0;height:4px;width:0;z-index:300;background:linear-gradient(120deg,#2563eb,#06b6d4,#22c55e);border-radius:0 4px 4px 0}
+.g{background-size:200% auto;animation:gshift 6s linear infinite}
+@keyframes gshift{to{background-position:200% center}}
+.btn.p{position:relative;overflow:hidden}
+.btn.p::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 3.5s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-70%}100%{left:130%}}
+.card:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.ic{transition:transform .3s}
+</style>
+
+<div id="intro" aria-hidden="true"><div class="it"><h1>Pradnya Garud</h1><p>FULL STACK DEVELOPER &middot; UI DESIGNER</p><div class="lbar"><i></i></div></div></div>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var intro = document.getElementById('intro');
+  if (reduce) { intro.remove(); return; }
+
+  var cols = ['rgba(37,99,235,.5)', 'rgba(6,182,212,.5)', 'rgba(34,197,94,.45)', 'rgba(250,204,21,.4)'];
+  function bubble(parent, inIntro) {
+    var b = document.createElement('span'), s = inIntro ? 10 + Math.random() * 70 : 18 + Math.random() * 90;
+    b.className = 'bb';
+    b.style.cssText = 'width:' + s + 'px;height:' + s + 'px;left:' + (Math.random() * 100) + '%;' +
+      '--x:' + (Math.random() * 80 - 40) + 'px;' +
+      '--d:' + (inIntro ? 4 + Math.random() * 4 : 12 + Math.random() * 14) + 's;' +
+      '--dl:-' + (Math.random() * (inIntro ? 4 : 14)) + 's;' +
+      '--c1:' + cols[Math.floor(Math.random() * cols.length)];
+    parent.appendChild(b);
+  }
+
+  // 1) bubbles in the black intro
+  for (var i = 0; i < 24; i++) bubble(intro, true);
+  document.documentElement.style.overflow = 'hidden';
+
+  // 2) black -> colour reveal (circle opens from the centre)
+  function reveal() {
+    document.documentElement.classList.add('rdy');
+    var t0 = performance.now(), dur = 1300;
+    (function step(t) {
+      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      intro.style.setProperty('--r', (e * 150) + '%');
+      if (p < 1) requestAnimationFrame(step);
+      else { intro.remove(); document.documentElement.style.overflow = ''; }
+    })(t0);
+  }
+  setTimeout(reveal, 2600);   // <-- how long the black screen stays (milliseconds)
+
+  // 3) floating bubbles behind the page
+  var bg = document.createElement('div');
+  bg.id = 'bgb';
+  document.body.appendChild(bg);
+  for (var j = 0; j < 14; j++) bubble(bg, false);   // <-- number of bubbles
+
+  // 4) little bubbles pop where you click
+  document.addEventListener('click', function (e) {
+    for (var k = 0; k < 6; k++) {
+      var p = document.createElement('span'), s = 8 + Math.random() * 14;
+      p.className = 'pop';
+      p.style.cssText = 'width:' + s + 'px;height:' + s + 'px;left:' + (e.clientX - s / 2) + 'px;top:' + (e.clientY - s / 2) + 'px;--dx:' + (Math.random() * 90 - 45) + 'px';
+      p.addEventListener('animationend', function () { this.remove(); });
+      document.body.appendChild(p);
+    }
+  });
+})();
+</script>
+
+<div id="sp"></div>
+<script>
+addEventListener("scroll",function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;document.getElementById("sp").style.width=(m>0?h.scrollTop/m*100:0)+"%"},{passive:true});
+</script>
+</body>
+</html>
